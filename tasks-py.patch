@@ -1,0 +1,11 @@
+--- tasks.py	2019-07-19 15:06:58.849393482 +0200
++++ changed/tasks.py	2019-07-19 15:04:03.829805808 +0200
+@@ -158,6 +158,8 @@
+ 
+         :raises: RuntimeError when IPv6 stack is disabled
+         """
++        return # disable ipv6 check
++
+         if not os.path.exists(paths.IF_INET6):
+             raise RuntimeError(
+                 "IPv6 stack has to be enabled in the kernel and some "

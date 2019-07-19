@@ -1,0 +1,11 @@
+--- ipautil.py	2019-07-19 15:06:50.458460966 +0200
++++ changed/ipautil.py	2019-07-19 15:04:03.825805854 +0200
+@@ -1010,7 +1010,7 @@
+     port_open = True
+ 
+     # port has to be open on ALL resolved IPs
+-    for res in socket.getaddrinfo(host, port, socket.AF_UNSPEC, socket_type):
++    for res in socket.getaddrinfo(host, port, socket.AF_INET, socket_type):
+         af, socktype, proto, _canonname, sa = res
+         s = None
+         try:
